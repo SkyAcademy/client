@@ -1,0 +1,360 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin';
+body {
+  margin: 0px;
+  padding: 0px;
+  min-width: 278px;
+  background: #f7f7f7;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 0.9em !important;
+  line-height: 1.33;
+  color: rgba(0, 0, 0, 0.8);
+  font-smoothing: antialiased;
+  background: #F5F5F5;
+}
+::selection {
+  background-color: rgba(255, 255, 160, 0.4);
+  color: rgba(0, 0, 0, 0.8);
+}
+.striped.table > tr:nth-child(2n),
+.striped.table tbody tr:nth-child(2n) {
+  background-color: rgba(0, 0, 50, 0.03);
+}
+
+/* Stripes */
+
+.inverted.striped.table > tr:nth-child(2n),
+.inverted.striped.table tbody tr:nth-child(2n) {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.celled.table tr th,
+.celled.table tr td {
+  border-left: 1px solid #d4d4d5;
+}
+
+.celled.table tr th:first-child,
+.celled.table tr td:first-child {
+  border-left: none;
+}
+
+/* Prototype */
+
+.table {
+  width: 100%;
+  background: #ffffff;
+  margin: 1em 0em;
+  border: 1px solid #d0d0d0;
+  box-shadow: none;
+  border-radius: 0.25rem;
+  color: rgba(0, 0, 0, 0.8);
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+.table:first-child {
+  margin-top: 0em;
+}
+
+.table:last-child {
+  margin-bottom: 0em;
+}
+*****************************/
+
+/* Table Content */
+
+.table th,
+.table td {
+  -webkit-transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Headers */
+
+.table thead {
+  box-shadow: none;
+}
+
+.table thead th {
+  cursor: auto;
+  background: #f0f0f0;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0.7em 0.8em;
+  vertical-align: middle;
+  font-style: none;
+  font-weight: bold;
+  text-transform: none;
+  border-bottom: 1px solid #d4d4d5;
+  border-left: none;
+}
+
+.table thead tr > th:first-child {
+  border-left: none;
+}
+
+.table thead tr:first-child > th:first-child {
+  border-radius: 0.25rem 0em 0em 0em;
+}
+
+.table thead tr:first-child > th:last-child {
+  border-radius: 0em 0.25rem 0em 0em;
+}
+
+.table thead tr:first-child > th:only-child {
+  border-radius: 0.25rem 0.25rem 0em 0em;
+}
+
+/* Footer */
+
+.table tfoot {
+  box-shadow: none;
+}
+
+.table tfoot th {
+  cursor: auto;
+  border-top: 1px solid #d4d4d5;
+  background: #ffffff;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0.7em 0.8em;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.table tfoot tr > th:first-child {
+  border-left: none;
+}
+
+.table tfoot tr:first-child > th:first-child {
+  border-radius: 0em 0em 0em 0.25rem;
+}
+
+.table tfoot tr:first-child > th:last-child {
+  border-radius: 0em 0em 0.25rem 0em;
+}
+
+.table tfoot tr:first-child > th:only-child {
+  border-radius: 0em 0em 0.25rem 0.25rem;
+}
+
+/* Table Row */
+
+.table tr td {
+  border-top: 1px solid #d4d4d5;
+}
+
+.table tr:first-child td {
+  border-top: none;
+}
+
+/* Table Cells */
+
+.table td {
+  padding: 0.7em 0.8em;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Table Segment */
+
+.table.segment {
+  padding: 0em;
+}
+
+.table.segment:after {
+  display: none;
+}
+
+.table.segment.stacked:after {
+  display: block;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 767px) {
+  .table:not(.unstackable),
+  .table:not(.unstackable) tbody,
+  .table:not(.unstackable) tr,
+  .table:not(.unstackable) tr > th,
+  .table:not(.unstackable) tr > td {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .table:not(.unstackable) {
+    padding: 0em;
+  }
+
+  .table:not(.unstackable) thead {
+    display: block;
+  }
+
+  .table:not(.unstackable) tfoot {
+    display: block;
+  }
+
+  .table:not(.unstackable) tr > th,
+  .table:not(.unstackable) tr > td {
+    background: none;
+    border: none !important;
+    padding: 0.25em 0.75em;
+    box-shadow: none;
+  }
+
+  .table:not(.unstackable) th:first-child,
+  .table:not(.unstackable) td:first-child {
+    font-weight: bold;
+    padding-top: 1em;
+  }
+
+  .table:not(.unstackable) th:last-child,
+  .table:not(.unstackable) td:last-child {
+    box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    padding-bottom: 1em;
+  }
+
+  /* Clear BG Colors */
+
+  .table:not(.unstackable) tr > td.warning,
+  .table:not(.unstackable) tr > td.error,
+  .table:not(.unstackable) tr > td.active,
+  .table:not(.unstackable) tr > td.positive,
+  .table:not(.unstackable) tr > td.negative {
+    background-color: transparent !important;
+  }
+
+  /* Definition Table */
+
+  .definition.table:not(.unstackable) thead th:first-child {
+    box-shadow: none !important;
+  }
+
+  .definition.table:not(.unstackable) tr td:first-child {
+    padding-bottom: 1em;
+  }
+
+  .definition.table:not(.unstackable) tr td:nth-child(n+2) {
+    padding-top: 1em;
+  }
+}
+
+/*******************************
+          Buttons
+*******************************/
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  background-color: #e0e0e0;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0em 0.25em 0em 0em;
+  padding: 0.78571em 1.5em 0.78571em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: bold;
+  line-height: 1;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  background-image: none;
+  border-radius: 0.2857rem;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+}
+.blue.buttons .button,
+.blue.button {
+  background-color: #3b83c0;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+.blue.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+.blue.buttons .button:hover,
+.blue.button:hover {
+  background-color: #458ac6;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.blue.buttons .button:active,
+.blue.button:active {
+  background-color: #3370a5;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.blue.buttons .button.active,
+.blue.buttons .button.active:active,
+.blue.button.active,
+.blue.button .button.active:active {
+  background-color: #3576ac;
+  color: #ffffff;
+  text-shadow: none;
+}
+/*******************************
+          Messages
+*******************************/
+
+.ui.message {
+  position: relative;
+  min-height: 1em;
+  margin: 1em 0em;
+  background: #efefef;
+  padding: 1em 1.5em;
+  line-height: 1.3;
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 0.2857rem;
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15) inset, 0px 0px 0px 0px transparent;
+}
+
+.ui.blue.message {
+  background-color: #dff0ff;
+  color: #3b83c0;
+}
+
+.ui.blue.message .header {
+  color: #3576ac;
+}
+
+/*******************************
+          Input
+*******************************/
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  outline: none;
+  line-height: 1.2;
+  padding: 8px 13px;
+  background: #ffffff;
+  border: 1px solid #d4d4d5;
+  color: #808080;
+  border-radius: 2px;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus{
+  border-color: #d4d4d5;
+  border-radius: 0px;  
+  box-shadow: 3px 0em 0em 0em rgba(39, 41, 43, 0.3) inset;
